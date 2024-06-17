@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+$color1:#fff;
+$color2:#ededed;
+$color3:#cacaca;
+$color4:#4b4b4b;
+$color5:#161616;
+body{
+    nav{
+        z-index:2;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100dvh; 
+        background-color: $color5;
+        opacity:0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease;
+        .movebox{
+            .list{
+                list-style: none;
+                a{
+                    font-family: "Noto Sans TC", sans-serif;   
+                    color: #e4e4e4;
+                    list-style: none;
+                    font-size: 35px;
+                    text-decoration:none;
+                    line-height: 80px;
+                    transition: 0.5s;
+                    &:hover{
+                        background: $color1;
+                        color: $color4;
+                    }
+                }  
+            }
+        }
+    }
+    nav.open{
+        left: 0;
+    }
+    
+    .header{
+        z-index: 5;
+        position: fixed;
+        display:flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+        height: 230px;
+        background-image:linear-gradient(to bottom,$color5,transparent ); 
+        opacity: 0.8;
+        .meun{
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            color: $color2;
+            a{
+                list-style: none;
+                text-decoration:none;
+                color: #fff;
+            }
+        }
+        .logo{
+            margin-left: 62px;
+            img{
+                height: 32px;
+            }
+        }
+        .shop{
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            color: $color2;
+        }
+        .user{
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            color: $color2;
+            margin-left: 10px;
+        }
+        @media (max-width: 800px) {
+            .shop{
+                display: none;
+            }
+            .logo{
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 500px) {
+            .user{
+                display: none;
+            }
+        }
+    }
+
+    .front_page{
+        width: 100%;
+        overflow:hidden;
+        background-color: $color5;
+        .carousel-inner{
+            position: relative;
+            .carousel-indicators{
+                position: absolute;
+                bottom: 0;
+            }
+            .carousel-item{
+                width: 100%;
+                height: 100vh;
+                .d-block{
+                    display: block;
+                    object-fit: cover;
+                    width: 100%;
+                    position: absolute;
+                    top: -20dvh;
+                    left: 0;
+                    opacity: 0.7;
+                }
+                @media (max-width: 1600px) {
+                    .d-block{
+                       top: -10dvh; 
+                    }
+                }
+                @media (max-width: 1200px) {
+                    .d-block{
+                       height: 100%;
+                       width: 100%; 
+                    }
+                }
+                @media (max-width: 900px) {
+                    .d-block{
+                       height: 100%;
+                       width: auto; 
+                    }
+                }
+            }
+        }   
+    }
+    .about{
+        position: relative;
+        // display: block;
+        width: 100%;
+        height: 100dvh;
+        background-image: url(./img/sketch.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        .black{
+            width: 100%;
+            height: 100dvh;
+            background-color: #161616;
+            opacity: 0.6;
+        }
+        img{
+            display: block;
+            width: 300px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            margin-left: -150px;
+        }
+        p{
+            position: absolute;
+            color:$color3;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 20px;
+            top: 40%;
+            left: 50%;
+            margin-left: -280px;
+        }
+        @media (max-width: 1200px) {
+            img{
+                width: 200px; 
+                margin-left: -90px;
+                margin-top: 30px;
+            }
+            p{
+                width: 280px;
+                font-size: 14px;
+                margin-left: -110px;
+            }
+        }
+    }
+
+    .product{
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100dvh;
+
+        .GMR{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            padding-bottom: 20px;
+            background-image: url(./img/left.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+    
+            p{
+                font-size: 18px;
+                text-align: center;
+                margin: auto;
+                margin-top: 90dvh;
+                font-family: "Noto Sans TC", sans-serif;
+                a{
+                    list-style: none;
+                    text-decoration:none;
+                    color: #fff;
+                }
+            }
+        }
+        @media (max-width: 1200px) {
+                
+            .GMR{
+                padding-bottom: 20px;
+            }
+        }
+        @media (max-width: 900px) {    
+            .GMR{
+                width: 100%;
+            }
+        }
+
+        .AMG{
+            width: 50%;
+            height: 100%;  
+            background-image: url(./img/right.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 20px;
+            p{
+                font-size: 18px;
+                margin: auto;
+                text-align: center;
+                margin-top: 90dvh;
+                
+                font-family: "Noto Sans TC", sans-serif;
+                a{
+                    list-style: none;
+                    text-decoration:none;
+                    color: #fff;
+                }
+            }
+        }
+        @media (max-width: 1200px) {    
+            .AMG{
+                padding-bottom: 20px;
+            }
+        }
+        @media (max-width: 900px) {    
+            .AMG{
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 1200px) {
+        .product{
+         flex-wrap: wrap;
+         height: auto;
+        }   
+    }
+
+
+
+    .feeter{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 12dvh;
+        width: 100%;
+        height: 40dvh;
+        background: $color5;
+        dl{
+            dt{
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                color: $color3;
+            }
+            dd{
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                line-height: 14px;
+                margin-top: 1.5dvh;
+                font-weight: 400;
+                a{
+                    color: $color3;
+                    &:hover{
+                        color: rgb(117, 184, 238);
+                    }
+                }
+            }   
+        }
+    }
+
+    @media (max-width: 750px) {
+        .feeter{
+         flex-wrap: wrap;
+         height: auto;
+         padding-top: 8dvh;
+         padding-bottom: 8dvh;
+        }
+        dl{
+         width: 51%;
+         margin-top: 20px;
+         text-align: center;
+        }       
+    }
+    
+}
