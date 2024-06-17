@@ -115,25 +115,25 @@ body .front_page .carousel-inner .carousel-item .d-block {
      object-fit: cover;
   width: 100%;
   position: absolute;
-  top: -20dvh;
+  top: -24%;
   left: 0;
   opacity: 0.7;
 }
 @media (max-width: 1600px) {
   body .front_page .carousel-inner .carousel-item .d-block {
-    top: -10dvh;
+    top: -10%;
   }
 }
 @media (max-width: 1200px) {
   body .front_page .carousel-inner .carousel-item .d-block {
     height: 100%;
-    width: 100%;
+    width: auto;
   }
 }
 @media (max-width: 900px) {
   body .front_page .carousel-inner .carousel-item .d-block {
     height: 100%;
-    width: auto;
+    width: 100%;
   }
 }
 body .about {
